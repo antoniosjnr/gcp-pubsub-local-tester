@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  gcp.pubsub.local.tester.api:
+    image: ${DOCKER_REGISTRY-}gcppubsublocaltesterapi
+    build:
+      context: .
+      dockerfile: GCP.PubSub.Local.Tester.API/Dockerfile
+    networks:
+      - rede
+  gcp.emulator:
+    image: messagebird/gcloud-pubsub-emulator:latest
+    networks:
+       - rede    
+networks:
+  rede:
+    driver: bridge

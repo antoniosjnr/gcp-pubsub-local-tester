@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x28Ityb4fzBJguZ3O/fEMmBtl14luPeO46JLzjpV+iY=",
+  "Source": "GCP.PubSub.Local.Tester.API",
+  "BasePath": "_content/GCP.PubSub.Local.Tester.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

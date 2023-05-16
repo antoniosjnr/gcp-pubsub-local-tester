@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GCP.PubSub.Local.Tester.API</name>
+    </assembly>
+    <members>
+        <member name="M:GCP.Local.Tester.API.Controllers.EmulatorPubSubController.CreateTopic(System.String)">
+            <summary>
+            Método responsável por criar um tópico no emulador do Pub/Sub GCP    
+            </summary>
+            <param name="topicId">Id do tópico a ser criado.</param>
+        </member>
+        <member name="M:GCP.Local.Tester.API.Controllers.EmulatorPubSubController.CreateSubscriber(System.String,System.String,System.String)">
+            <summary>
+            Método responsável pela criação de uma subscriber, para leitura de mensagens enviadas a um tópico.
+            </summary>
+            <param name="subscriptionId">Id do subscriber a ser criado.</param>
+            <param name="topicId">Id do tópico a ser consumido pela subscriber</param>
+            <param name="pushEndpoint">Você pode informar um endpoint (webhook) para receber qualquer mensagem que for postada no tópico. <br></br>
+            O endpoint informado deve esperar um método POST. Segue abaixo um exemplo de mensagem enviada para o endpoint push: <br></br>
+            {<br></br>   
+                \"subscription\":\"id subscription",<br></br>   
+                \"message\":{<br></br>      
+                    \"data\":\"texto encriptografado base64\",<br></br>      
+                    \"messageId\":\"1\",<br></br>      
+                    \"attributes\":{<br></br>         
+                     }<br></br>   
+                }<br></br>
+            }
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GCP.Local.Tester.API.Controllers.EmulatorPubSubController.PublishMessage(System.String,System.String)">
+            <summary>
+            Método responsável por fazer a publicação da mensagem
+            </summary>
+            <param name="topicId">Id do tópico a ser enviada a mensagem</param>
+            <param name="message">Mensagem</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

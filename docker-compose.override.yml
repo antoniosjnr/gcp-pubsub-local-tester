@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  gcp.pubsub.local.tester.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - PUBSUB_PROJECT_ID=project-0
+      - PUBSUB_EMULATOR_HOST=gcp.emulator:8681
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

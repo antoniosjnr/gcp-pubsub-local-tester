@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\GCP.PubSub.Local.Tester.API.props" />
+</Project>
